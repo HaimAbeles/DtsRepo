@@ -87,7 +87,7 @@ namespace DtsProjectBL
             string body = "<div dir='rtl'>" +
                             $"<a target='_blank' href={_configuration["BaseUrl"]}/api/Login/AccountVerification/{key} >לחץ כאן לאימות החשבון</a>" +
                           "</div>";
-            string subject = "ClickTest - אימות חשבון"; 
+            string subject = "DtsProject - אימות חשבון"; 
             dynamic obj = new ExpandoObject();
             obj.body = body;
             obj.subject = subject;
@@ -102,7 +102,7 @@ namespace DtsProjectBL
                                 $"<div>הסיסמה תקפה לחמש דקות בלבד!</div>" +
                             $"</div>" +
                           $"</div>";
-            string subject = "ClickTest - איפוס סיסמה";
+            string subject = "DtsProject - איפוס סיסמה";
             dynamic obj = new ExpandoObject();
             obj.body = body;
             obj.subject = subject;

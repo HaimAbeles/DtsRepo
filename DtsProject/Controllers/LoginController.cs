@@ -22,14 +22,13 @@ namespace DtsProject.Controllers
         [HttpGet]
         [ActionName("AccountVerification")]
         [Route("api/[controller]/[action]/{key?}")]
-        //public IActionResult AccountVerification([FromQuery] string key) //https://localhost:44372/api/Login/AccountVerification?key={key}
-        public IActionResult AccountVerification([FromRoute] string key) //https://localhost:44372/api/Login/AccountVerification/{key}
+        public IActionResult AccountVerification([FromRoute] string key) 
         {
             try
             {
                 _logger.LogInformation($"try AccountVerification, key: {key}");
                 bool userVerification = _loginBL.AccountVerification(key);
-                return userVerification ? Redirect("https://localhost:44372") : BadRequest(); ;
+                return userVerification ? Redirect("http://localhost:4321/QueueBarbershop") : BadRequest(); ;
             }
             catch(Exception ex)
             {

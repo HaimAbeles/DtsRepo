@@ -1,0 +1,163 @@
+﻿.div-new-queue {
+    display: inline-block;
+    padding: 2% 0 0 2%;
+}
+
+.root-empty-list {
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 4em;
+}
+
+.text-list {
+    box-shadow: 0px 0px 6px 2px #000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button, input[type="button"] {
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+    background: #1fadd2;
+    margin-top: 7px;
+    font-size: 17px;
+}
+
+.btn-new-queue {
+    height: 49px;
+    width: 100%;
+}
+
+    button:hover, input[type="button"]:hover {
+        background: linear-gradient(45deg, var(--color-app-base), var(--color-app-second));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    button:active, input[type="button"]:active {
+        opacity: 0.3;
+    }
+
+.root-searches {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-searches {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input {
+    height: 40px;
+    width: 265px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    direction: rtl;
+}
+
+.root-list {
+    text-align: center;
+}
+
+.list-queue {
+    display: inline-block;
+    padding: 30px;
+    border-radius: 10px;
+    /*border: 1px solid #000;*/
+    box-shadow: 0px 0px 6px 0px #fff;
+}
+
+.single-queue {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    width: fit-content;
+}
+
+.single-queue:hover {
+    opacity: 0.5;
+    color: #fff;
+}
+
+.root-create-queue {
+    padding: 20px;
+    text-align: center;
+}
+
+.div-date-queue {
+    padding: 10px;
+    margin: 5px;
+}
+
+.text-date-queue {
+
+}
+
+.input-date {
+    border-radius: 10px;
+    padding: 6px;
+    margin: 3px;
+}
+
+.div-time-queue {
+    padding: 10px;
+    margin: 10px;
+}
+
+.text-time-queue {
+
+}
+
+.input-time {
+    border-radius: 10px;
+    padding: 6px;
+    margin: 3px;
+    width: 100%;
+}
+
+.div-btn {
+    text-align: center;
+}
+
+.save-btn {
+    padding: 10px;
+    width: 30%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.close-btn {
+    padding: 10px;
+    width: 30%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.single-customer-popup {
+    padding: 20px;
+}
+
+.root-dialog-queue-detials {
+    text-align: right;
+    padding: 10px;
+}
+
+.div-delete {
+    margin-top: 20px;
+}
+
+.delete-queue {
+    height: 40px;
+    width: 40%;
+}

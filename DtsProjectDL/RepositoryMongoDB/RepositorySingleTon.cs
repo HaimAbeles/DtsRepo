@@ -11,6 +11,7 @@ namespace DtsProjectDL.RepositoryMongoDB
         public RepositorySingleTon(IConfiguration _configuration)
         {
             _instance.ConnectToMongoDBUserLogin(_configuration);
+            _instance.ConnectToMongoDBCustomerQueue(_configuration);
         }
     }
 }

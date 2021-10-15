@@ -25,6 +25,10 @@ namespace DtsProject
             services.AddSingleton(typeof(ILoginBL), typeof(LoginBL));
             services.AddSingleton(typeof(ILoginDL), typeof(LoginDL));
 
+            services.AddSingleton(typeof(IBarberShopBL), typeof(BarberShopBL));
+            services.AddSingleton(typeof(IBarbershopDL), typeof(BarbershopDL));
+
+
             services.AddSingleton(typeof(IRepositorySingleTon), typeof(RepositorySingleTon));
             services.AddSingleton(typeof(IRepositoryMongoDB), typeof(RepositoryMongoDB));
 
@@ -36,9 +40,9 @@ namespace DtsProject
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = "ClickTest",
+                    Title = "DtsProject",
                     Version = "v1",
-                    Description = "ClickTest - מידע על אוסף הקונטרולים שמסופקים על ידי מערכת"
+                    Description = "DtsProject - מידע על אוסף הקונטרולים שמסופקים על ידי מערכת"
                 });
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
@@ -53,8 +57,8 @@ namespace DtsProject
             app.UseSwaggerUI(c =>
             {
                 c.RoutePrefix = "swagger";
-                c.SwaggerEndpoint("./v1/swagger.json", "ClickTest.Controllers V1");
-                c.DocumentTitle = "שירות ClickTest";
+                c.SwaggerEndpoint("./v1/swagger.json", "DtsProject.Controllers V1");
+                c.DocumentTitle = "שירות DtsProject";
                 c.InjectStylesheet("/Swagger/ui/css/custom.css");
                 c.InjectJavascript("/Swagger/ui/script/custom.js");
             });

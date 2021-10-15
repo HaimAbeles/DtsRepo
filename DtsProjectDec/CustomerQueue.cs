@@ -2,19 +2,19 @@
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 
+
 namespace DtsProjectDec
 {
-    public class UserLogin
+    public class CustomerQueue
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         [BsonIgnoreIfDefault]
         public ObjectId? Id { get; set; }
+        public string uniqueId { get; set; }
         public string name { get; set; }
-        public string userName { get; set; }
-        public string password { get; set; }
-        public bool? logiValidation { get; set; }
-        public string? key { get; set; }
-        public DateTime? timeResetPassword { get; set; }
+        public string email { get; set; }
+        public DateTime dateTimeQueue { get; set; }
+        public DateTime timeCreated { get; set; }
     }
 }
