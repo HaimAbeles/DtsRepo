@@ -25,7 +25,7 @@ namespace DtsProjectDL
         {
             IMongoCollection<CustomerQueue> collection = _repositorySingleTon.GetInstance().ConnectionMongoDBCustomerQueue;
             var builder = Builders<CustomerQueue>.Filter;
-            var filt = builder.Eq("name", "Haim");
+            var filt = builder.Empty;
             List<CustomerQueue> customersList = collection.Find(filt).ToList();
             return customersList;
         }
