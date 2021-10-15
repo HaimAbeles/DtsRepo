@@ -1,6 +1,6 @@
 ﻿class Http {
 
-    static Get = (url, data) => {
+    static Get = (url, data, type = "GET") => {
         if (!!data) {
             if (typeof (data) === "string") {
                 url = `${url}?${data}`;
@@ -11,7 +11,8 @@
         }
 
         return fetch(url, {
-            credentials: 'include'
+            credentials: 'include',
+            method: type
         })
             .then((response) => {
                 return response;

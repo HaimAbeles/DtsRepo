@@ -40,7 +40,7 @@ namespace DtsProject.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpDelete]
         [ActionName("DeleteQueue")]
         [Route("api/[controller]/[action]/{id?}")]
         public IActionResult DeleteQueue([FromRoute] string id)

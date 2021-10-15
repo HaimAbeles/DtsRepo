@@ -4,6 +4,7 @@ import Http from '../../General/Http';
 import './QueueBarbershop.css';
 import useLoadingContext from '../../CustomHooks/useLoadingContext.jsx';
 import useDialogContext from '../../CustomHooks/useDialogContext.jsx';
+import { type } from 'jquery';
 
 
 
@@ -45,7 +46,7 @@ const QueueBarbershop = () => {
 
     const deleteQueue = (id) => {
         showLoading(true);
-        Http.Get(`api/Barbershop/DeleteQueue/${id}`).then(res => setRefresh(!refresh));
+        Http.Get(`api/Barbershop/DeleteQueue/${id}`, null, "DELETE").then(res => setRefresh(!refresh));
         showLoading(false);
         manageDialog(false);
     }
