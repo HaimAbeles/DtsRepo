@@ -36,12 +36,9 @@ const QueueBarbershop = () => {
         const uniqueId = Date.now().toString(36) + Math.random().toString(36).substr(2);
         const data = { uniqueId, dateTimeQueue: new Date(`${dateQueue}T${timeQueue}`), timeCreated: new Date().toJSON(), name, email };
         showLoading(true);
-        Http.Post('api/Barbershop/InsertQueue', data).then(res => showLoading(false));
+        Http.Post('api/Barbershop/InsertQueue', data).then(res => showLoading(false)).then(setRefresh(!refresh));
         console.log({ uniqueId, dateTimeQueue: new Date(`${dateQueue}T${timeQueue}`), timeCreated: new Date().toJSON(), name, email });
         setShowDialog(false);
-        setTimeout(() => {
-            setRefresh(!refresh);
-        }, 1000)
     }
 
     const deleteQueue = (id) => {
@@ -54,7 +51,7 @@ const QueueBarbershop = () => {
     const openQueueDetails = (customerDtelails) => {
         console.log('customerDtelails', customerDtelails)
         const dateQueue = customerDtelails.dateTimeQueue.split('T');
-        const dateCreated = customerDtelails.dateTimeQueue.split('T');
+        const dateCreated = customerDtelails.timeCreated.split('T');
         const { email } = JSON.parse(sessionStorage.getItem('user'));
         const dialog =
             <>

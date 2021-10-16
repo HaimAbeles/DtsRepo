@@ -24,6 +24,8 @@ namespace DtsProjectBL
 
         public bool InsertQueue(CustomerQueue queue)
         {
+            queue.dateTimeQueue = queue.dateTimeQueue.AddHours(3);
+            queue.timeCreated = DateTime.Now.AddHours(3);
             return _barbershopDL.InsertQueue(queue);
         }
 

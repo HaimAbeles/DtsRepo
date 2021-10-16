@@ -28,7 +28,6 @@ namespace DtsProject.Controllers
         {
             try
             {
-                queue.dateTimeQueue = queue.dateTimeQueue.AddHours(3);
                 _logger.LogInformation($"try to insert queue: {queue}");
                 bool status = _barberShopBL.InsertQueue(queue);
                 return Ok(status);
